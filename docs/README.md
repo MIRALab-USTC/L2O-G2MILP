@@ -1,3 +1,7 @@
+---
+title: G2MILP
+---
+
 ## Publication
 **A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability. NeurIPS 2023 (Spotlight).**
 

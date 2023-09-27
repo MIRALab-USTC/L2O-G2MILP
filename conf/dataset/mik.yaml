@@ -1,0 +1,6 @@
+name: mik
+num_train: 80
+
+rhs_type: int
+lhs_type: int
+obj_type: int

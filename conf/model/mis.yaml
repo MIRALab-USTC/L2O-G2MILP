@@ -1,0 +1,39 @@
+common: &common
+  hidden_size: 16
+  embd_size: 16
+
+loss_weights:
+  cons_loss: 0.0
+  degree_loss: 1.0
+  logits_loss: 1.0
+  weights_loss: 0.0
+
+graph_embedding:
+  <<: *common
+
+gnn:
+  <<: *common
+  depth: 6
+  jk: cat
+  aggr: add
+  aggr_coef:
+    c_to_v: 0.128
+    v_to_c: 0.5
+
+resample:
+  <<: *common
+  variational: true
+
+bias_predictor:
+  <<: *common
+
+degree_predictor:
+  <<: *common
+
+logits_predictor:
+  <<: *common
+
+weights_predictor:
+  <<: *common
+
+

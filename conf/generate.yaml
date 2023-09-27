@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+  - hydra: generate
+  - dataset: mik
+  - model: ${dataset}
+  - generator: default
+  - benchmarking: default
+  - paths: [common, generate]
+
+seed: 2
+cuda: 0
+num_workers: 10
+
+dir:

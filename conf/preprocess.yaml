@@ -1,0 +1,11 @@
+defaults:
+  - _self_
+  - hydra: preprocess
+  - dataset: mik
+  - paths: common
+
+seed: 2
+num_workers: 10
+
+compute_features: true
+solve_instances: true

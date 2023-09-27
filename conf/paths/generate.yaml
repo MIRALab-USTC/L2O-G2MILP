@@ -1,0 +1,4 @@
+model_dir: ${dir}/model
+samples_dir: ${dir}/generate/${now:%m-%d}/${now:%H:%M:%S}-eta-${generator.mask_ratio}/samples
+benchmark_dir: ${dir}/generate/${now:%m-%d}/${now:%H:%M:%S}-eta-${generator.mask_ratio}/benchmark
+    

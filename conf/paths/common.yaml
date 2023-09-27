@@ -1,0 +1,10 @@
+data_dir: ./data/${dataset.name}/train/
+testdata_dir: ./data/${dataset.name}/test/
+
+preprocess_dir: ./preprocess/${dataset.name}/
+dataset_samples_dir: ./preprocess/${dataset.name}/samples/
+
+dataset_stats_dir: ./preprocess/${dataset.name}/stats/
+dataset_features_path: ./preprocess/${dataset.name}/stats/features.csv
+dataset_stats_path: ./preprocess/${dataset.name}/stats/stats.json
+dataset_solving_path: ./preprocess/${dataset.name}/stats/solving_results.csv

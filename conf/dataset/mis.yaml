@@ -1,0 +1,6 @@
+name: mis
+num_train: 1000
+
+rhs_type: int
+lhs_type: int
+obj_type: int

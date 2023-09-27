@@ -1,6 +1,6 @@
-# G2MILP: A Deep Instance Generative Framework For MILP Solvers Under Limited Data Availability
+# G2MILP: A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability
 
-This is the code of paper **A Deep Instance Generative Framework For MILP Solvers Under Limited Data Availability**. *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). 
+This is the code of paper **"A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability"**. *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). 
 
 ## Environment
 - Python environment

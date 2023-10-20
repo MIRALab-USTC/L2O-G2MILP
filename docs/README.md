@@ -3,7 +3,7 @@
 ## Publication
 **A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability. NeurIPS 2023 (Spotlight).**
 
-[Zijie Geng](https://zijiegeng.github.io), [Xijun Li](https://xijunlee.github.io/), [Jie Wang\*](https://miralab.ai/people/jie-wang/), Xiao Li, Yongdong Zhang, Feng Wu
+[Zijie Geng](https://miralab.ai/people/zijie-geng/), [Xijun Li](https://xijunlee.github.io/), [Jie Wang\*](https://miralab.ai/people/jie-wang/), Xiao Li, Yongdong Zhang, Feng Wu
 
 MIRA Lab, University of Science and Technology of China / Noah's Ark Lab, Huawei
 

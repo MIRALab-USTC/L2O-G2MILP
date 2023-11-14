@@ -59,6 +59,7 @@ def instance2graph(path: str, compute_features: bool = False):
         lhs_coefs = lhs[np.where(nonzeros)]
         var_degree, cons_degree = nonzeros.sum(axis=0), nonzeros.sum(axis=1)
 
+        edge_indices[1] += edge_indices[0].max() + 1
         pyg_graph = Data(
             x_s = constraint_features,
             x_t = variable_features,

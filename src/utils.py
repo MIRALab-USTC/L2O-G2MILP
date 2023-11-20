@@ -59,11 +59,12 @@ def instance2graph(path: str, compute_features: bool = False):
         lhs_coefs = lhs[np.where(nonzeros)]
         var_degree, cons_degree = nonzeros.sum(axis=0), nonzeros.sum(axis=1)
 
-        edge_indices[1] += edge_indices[0].max() + 1
+        nx_edge_indices = edge_indices.copy()
+        nx_edge_indices[1] += nx_edge_indices[0].max() + 1
         pyg_graph = Data(
             x_s = constraint_features,
             x_t = variable_features,
-            edge_index = torch.LongTensor(edge_indices),
+            edge_index = torch.LongTensor(nx_edge_indices),
             node_attribute = "bipartite"
         )
         pyg_graph.num_nodes = len(constraint_features) + len(variable_features)

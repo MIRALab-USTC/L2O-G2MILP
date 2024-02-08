@@ -162,7 +162,7 @@ class G2MILP(nn.Module):
                     edge_index, edge_attr)
 
                 graphs[bid] = graph
-                weights_ptr += len(new_edge_index)
+                weights_ptr += len(new_edge_index.T)
 
         results = []
         for graph in graphs:

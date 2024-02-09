@@ -1,8 +1,13 @@
-# G2MILP: A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability
+# G2MILP: Learning to Generate Mixed-Integer Linear Programming (MILP) Instances
 
-This is the code of paper **"A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability"**. *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). 
+This is the code for **G2MILP**, a deep learning-based mixed-integer linear programming (MILP) instance generator. 
 
 Page: [https://miralab-ustc.github.io/L2O-G2MILP/](https://miralab-ustc.github.io/L2O-G2MILP/)
+
+## Publications
+**"A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability"**. *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). [[paper](https://openreview.net/pdf?id=AiEipk1X0c)]
+
+**"G2MILP: Learning to Generate Mixed-Integer Linear Programming Instances for MILP Solvers"**. Jie Wang, Zijie Geng, Xijun Li, Jianye Hao, Yongdong Zhang, Feng Wu. [[paper](https://www.techrxiv.org/doi/full/10.36227/techrxiv.24566554.v1)]
 
 ## Environment
 - Python environment
@@ -49,10 +54,12 @@ L2O-G2MILP
 │       └── test/
 ├── scripts/
 ├── src/
+├── src_hard/
 ├── README.md
 ├── benchmark.py
 ├── generate.py
 ├── preprocess.py
+├── train-hard.py
 └── train.py
 ```
 
@@ -88,15 +95,30 @@ python generate.py dataset=mis \
 ```
 The generated instances and benchmarking results are saved under `${TRAIN DIR}/generate/${DATE}/${TIME}`.
 
-## Citation
-If you find this code useful, please consider citing the following paper.
+### 4. Generating hard instances
+To generate hard instances,
 ```
-@inproceedings{
-anonymous2023a,
-title={A Deep Instance Generative Framework For {MILP} Solvers Under Limited Data Availability},
-author={Anonymous},
-booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-year={2023},
-url={https://openreview.net/forum?id=AiEipk1X0c}
+python train-hard.py dataset=mis \
+    cuda=0 num_workers=10 \
+    pretrained_model_path=${PRETRAIN PATH}
+```
+The `${PRETRAIN PATH}` is the path to the pretrained model.
+
+## Citation
+If you find this code useful, please consider citing the following papers.
+```
+@inproceedings{geng2023deep,
+  title={A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability},
+  author={Geng, Zijie and Li, Xijun and Wang, Jie and Li, Xiao and Zhang, Yongdong and Wu, Feng},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023}
+}
+
+@article{wang2023g2milp,
+  title={G2MILP: Learning to Generate Mixed-Integer Linear Programming Instances for MILP Solvers},
+  author={Wang, Jie and Geng, Zijie and Li, Xijun and Hao, Jianye and Zhang, Yongdong and Wu, Feng},
+  journal={Authorea Preprints},
+  year={2023},
+  publisher={Authorea}
 }
 ```

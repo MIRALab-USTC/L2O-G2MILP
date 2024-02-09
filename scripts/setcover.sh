@@ -18,6 +18,8 @@ nohup python generate.py dataset=setcover generator.mask_ratio=0.1 cuda=0 num_wo
     dir=outputs/models/setcover \
     > logs/setcover/generate:0.1.log 2>&1 &
 
+# generate hard instances
+# ${pretrained_model_path} should be changed to your own path
 nohup python train-hard.py dataset=setcover cuda=2 num_workers=10 job_name=setcover:hard \
     pretrained_model_path=./models/setcover/model/model_best.ckpt \
     > logs/setcover/train-hard.log 2>&1 &

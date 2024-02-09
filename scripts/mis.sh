@@ -18,6 +18,8 @@ nohup python generate.py dataset=mis generator.mask_ratio=0.1 cuda=0 num_workers
     dir=outputs/models/mis \
     > logs/mis/generate:0.1.log 2>&1 &
 
+# generate hard instances
+# ${pretrained_model_path} should be changed to your own path
 nohup python train-hard.py dataset=mis cuda=0 num_workers=10 job_name=mis:hard \
     pretrained_model_path=./models/mis/model/model_best.ckpt \
     > logs/mis/train-hard.log 2>&1 &

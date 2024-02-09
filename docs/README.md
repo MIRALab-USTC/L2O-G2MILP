@@ -1,3 +1,5 @@
+# G2MILP
+
 ## Introduction
 **G2MILP** is the first deep generative framework for mixed-integer linear programming (MILP) instances.
 This framework can learn to generate novel and realistic MILP instances without prior expert-designed formulations, while preserving the structures and computational hardness of real-world datasets, simultaneously.

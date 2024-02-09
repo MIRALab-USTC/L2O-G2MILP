@@ -17,7 +17,7 @@ from src.generator import Generator
 from src.model import G2MILP
 
 
-class Trainer():
+class Trainer:
     def __init__(self,
                  model: G2MILP,
                  train_set: InstanceDataset,
@@ -202,7 +202,7 @@ class Trainer():
             self.model_dir, f"model_step_{best_step}.ckpt")
         self.model.eval()
         self.model.zero_grad()
-        self.model.load_state_dict(torch.load(best_model_path))
+        self.model.load_state_dict(torch.load(best_model_path, map_location=torch.device('cuda')))
         torch.cuda.empty_cache()
         save_path = path.join(self.model_dir, f"model_best.ckpt")
         with torch.no_grad():
@@ -214,7 +214,7 @@ class Trainer():
         return self.lr_scheduler.get_last_lr()[0]
 
 
-class scheduler(object):
+class scheduler:
     def __init__(self, config) -> None:
         self.beta = config.min
         self.t = 0
@@ -287,7 +287,7 @@ class sigmoid_schedule(scheduler):
         return self.beta
 
 
-class beta_scheduler(object):
+class beta_scheduler:
     def __init__(self, config) -> None:
         self.mode = config.mode
         if self.mode not in ["linear", "sigmoid", "cyclical"]:

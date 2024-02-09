@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - hydra: train-hard
+  - dataset: mik
+  - model: ${dataset}
+  - trainer_hard: ${dataset}
+  - generator: train-hard
+  - paths: [common, train-hard]
+
+job_name: ${dataset.name}:hard
+
+seed: 2
+cuda: 5
+num_workers: 10
+
+pretrained_model_path: ./models/${dataset.name}/model/model_best.ckpt
+
+
+

@@ -64,7 +64,7 @@ def instance2graph(path: str, compute_features: bool = False):
         pyg_graph = Data(
             x_s = constraint_features,
             x_t = variable_features,
-            edge_index = torch.LongTensor(nx_edge_indices),
+            edge_index = torch.LongTensor(edge_indices),
             node_attribute = "bipartite"
         )
         pyg_graph.num_nodes = len(constraint_features) + len(variable_features)

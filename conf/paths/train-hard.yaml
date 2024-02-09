@@ -1,0 +1,5 @@
+train_dir: ./outputs/train-hard/${now:%m-%d}/${now:%H:%M:%S}-${job_name}/
+model_dir: ./outputs/train-hard/${now:%m-%d}/${now:%H:%M:%S}-${job_name}/model
+samples_dir: ./outputs/train-hard/${now:%m-%d}/${now:%H:%M:%S}-${job_name}/eta-${generator.mask_ratio}/samples
+benchmark_dir: ./outputs/train-hard/${now:%m-%d}/${now:%H:%M:%S}-${job_name}/eta-${generator.mask_ratio}/benchmark
+tensorboard_dir: ./outputs/train-hard/${now:%m-%d}/${now:%H:%M:%S}-${job_name}/

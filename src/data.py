@@ -78,12 +78,9 @@ class InstanceDataset(Dataset):
         if self.solving_path:
             self.solving_results = pd.read_csv(
                 solving_results_path).set_index("instance")
-            self.solving_time_mean = self.solving_results.loc[:, "solving_time"].mean(
-            )
-            self.solving_time_std = self.solving_results.loc[:, "solving_time"].std(
-            )
-            self.num_nodes_mean = self.solving_results.loc[:, "num_nodes"].mean(
-            )
+            self.solving_time_mean = self.solving_results.loc[:, "solving_time"].mean()
+            self.solving_time_std = self.solving_results.loc[:, "solving_time"].std()
+            self.num_nodes_mean = self.solving_results.loc[:, "num_nodes"].mean()
             self.num_nodes_std = self.solving_results.loc[:, "num_nodes"].std()
 
         if num_instances:

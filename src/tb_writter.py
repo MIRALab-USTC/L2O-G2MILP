@@ -16,3 +16,7 @@ def set_step(total_step: int):
 def add_scalar(tag, scalar_value, global_step=None, walltime=None):
     global tb_writter
     tb_writter.add_scalar(tag, scalar_value, global_step, walltime)
+
+def add_histogram(tag, values, global_step=None, bins='tensorflow', walltime=None, max_bins=None):
+    global tb_writter
+    tb_writter.add_histogram(tag, values, global_step, bins, walltime, max_bins)

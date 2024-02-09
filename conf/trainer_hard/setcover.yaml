@@ -1,0 +1,33 @@
+num_loops: 10
+storage_capacity: 100
+
+batch_size: 10
+batch_repeat_size: 2
+
+num_workers: 10
+
+steps: 2000
+save_start: 100
+save_step: 100
+
+lr:
+  init: 0.0001
+  anneal_step: 20
+  anneal_rate: 0.99
+
+grad_max_norm: 10.0
+weight_decay: 0.0001
+
+beta:
+  cons:
+    mode: "sigmoid"
+    min: 0.00001
+    max: 0.00002
+    warmup: 100
+    anneal_period: 5000
+  var:
+    mode: "sigmoid"
+    min: 0.0001
+    max: 0.0005
+    warmup: 100
+    anneal_period: 5000

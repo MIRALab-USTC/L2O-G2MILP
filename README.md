@@ -5,9 +5,9 @@ This is the code for **G2MILP**, a deep learning-based mixed-integer linear prog
 Page: [https://miralab-ustc.github.io/L2O-G2MILP/](https://miralab-ustc.github.io/L2O-G2MILP/)
 
 ## Publications
-**"A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability"**. *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). [[paper](https://openreview.net/pdf?id=AiEipk1X0c)]
+**"A Deep Instance Generative Framework for MILP Solvers Under Limited Data Availability".** *Zijie Geng, Xijun Li, Jie Wang, Xiao Li, Yongdong Zhang, Feng Wu.* NeurIPS 2023 (Spotlight). [[paper](https://openreview.net/pdf?id=AiEipk1X0c)]
 
-**"G2MILP: Learning to Generate Mixed-Integer Linear Programming Instances for MILP Solvers"**. Jie Wang, Zijie Geng, Xijun Li, Jianye Hao, Yongdong Zhang, Feng Wu. [[paper](https://www.techrxiv.org/doi/full/10.36227/techrxiv.24566554.v1)]
+**"G2MILP: Learning to Generate Mixed-Integer Linear Programming Instances for MILP Solvers".** *Jie Wang, Zijie Geng, Xijun Li, Jianye Hao, Yongdong Zhang, Feng Wu.* [[paper](https://www.techrxiv.org/doi/full/10.36227/techrxiv.24566554.v1)]
 
 ## Environment
 - Python environment
